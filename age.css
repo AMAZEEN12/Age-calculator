@@ -1,0 +1,129 @@
+body{
+    font-family: "Poppins", sans-serif;
+    margin: 0;
+    padding: 0;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: hsl(0, 0%, 86%);
+}
+main{
+    background-color: white;
+    width: 50vw;
+    border-radius: 10px 10px 100px 10px;
+    box-shadow: 5px 5px 10px hsl(0, 1%, 44%);
+    animation: scaleIn 3s ease-in-out;
+}
+@keyframes scaleIn {
+    from{
+        opacity: 0;
+        transform: scale(0);
+    }
+    to{
+        opacity: 1;
+        transform: scale(1);
+    }
+}
+.container{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 20px;
+    padding: 20px;
+}
+.flex{
+    display: flex;
+    flex-direction: column;
+}
+label{
+    font-size: 8px;
+    font-weight: 700;
+    color: hsl(0, 1%, 44%);
+    letter-spacing: 2px;
+}
+input[type='number']{
+    font-size: 24px;
+    font-weight: 700;
+    color: hsl(0, 0%, 8%); 
+    border-radius: 10px;
+    height: 30px;
+    width: 100px;
+    margin-top: 10px;
+    padding: 10px 20px;
+    border: 1px solid  hsl(0, 0%, 86%);
+    outline: none;
+}
+input[type = 'number']:focus{
+    border: 1px solid hsl(259, 100%, 65%);
+}
+hr{
+    width: 500px;
+    opacity: 0.3;
+    margin-left: 30px;
+}
+.line{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0 20px;
+    position: relative;
+    top: 20px;
+}
+button{
+    width: 70px;
+    height: 70px;
+    border-radius: 50%;
+    border: none;
+    background-image: url(icon-arrow.svg);
+    background-size: 30px;
+    background-position-x: 19px;
+    background-position-y: 18px;
+    background-repeat: no-repeat;
+    background-color: hsl(259, 100%, 65%);
+    right: 5vw;
+    position: absolute;
+}
+.age-container{
+    margin: 80px 20px 0 20px;
+    padding: 0 20px;
+}
+.first{
+    color: hsl(259, 100%, 65%);
+    font-size: 32px;
+    font-weight: 900;
+}
+.age{
+    display: flex;
+    justify-content: left;
+    align-items: center;
+    margin-top: -60px;
+}
+.second{
+    color: hsl(0, 0%, 8%);
+    font-size: 40px;
+    font-weight: 800;
+    padding-left: 5px;
+}
+span{
+   color: hsl(0, 100%, 67%);
+   font-style: italic;
+   font-size: 8px; 
+   margin-top: 5px;
+   font-weight: 500;
+}
+::placeholder{
+    color: hsl(0, 0%, 86%);;
+}
+
+@media screen and (min-width: 375px) and (max-width: 750px){
+    main{
+        width: 90vw;
+    }
+    input[type='number']{
+        width: 35px;
+    }
+    button{
+        right: 28vw;
+    }
+}
